@@ -25895,6 +25895,26 @@ in {
     };
   };
 
+  iso-639 = buildPythonPackage rec {
+    name = "iso-639-${version}";
+    version = "0.4.5";
+
+    src = pkgs.fetchurl {
+      url = "mirror://pypi/i/iso-639/${name}.tar.gz";
+      sha256 = "0jffmh4m20q8j27xb2fqbnlghjj0cx8pgsbzqisdg65qh2wd976w";
+    };
+  };
+
+  iso3166 = buildPythonPackage rec {
+    name = "iso3166-${version}";
+    version = "0.8";
+
+    src = pkgs.fetchurl {
+      url = "mirror://pypi/i/iso3166/${name}.tar.gz";
+      sha256 = "0cs9w507dj93jj9z9di93lx2fplf8pma4jkrsvvb258dv6z1gszv";
+    };
+  };
+
   toolz = buildPythonPackage rec{
     name = "toolz-${version}";
     version = "0.8.2";
