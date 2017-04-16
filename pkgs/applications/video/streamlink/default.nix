@@ -12,7 +12,7 @@ pythonPackages.buildPythonApplication rec {
   };
 
   buildInputs = (with pythonPackages; [ pytest mock ]);
-  propagatedBuildInputs = (with pythonPackages; [ pycrypto requests2 iso-639 iso3166 ]) ++ [ rtmpdump ];
+  propagatedBuildInputs = (with pythonPackages; [ pycrypto pycountry requests2 iso-639 iso3166 ]) ++ [ rtmpdump ];
 
   meta = with stdenv.lib; {
     homepage = https://github.com/streamlink/streamlink;
