@@ -596,6 +596,8 @@ with pkgs;
 
   gcsfuse = callPackage ../tools/filesystems/gcsfuse { };
 
+  gltools = callPackage ../development/libraries/gltools { };
+
   glyr = callPackage ../tools/audio/glyr { };
 
   lastpass-cli = callPackage ../tools/security/lastpass-cli { };
