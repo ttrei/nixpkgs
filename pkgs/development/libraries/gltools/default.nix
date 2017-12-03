@@ -12,5 +12,5 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [ gcc cmake ];
 
-  buildInputs = [ boost freetype glew ];
+  propagatedBuildInputs = [ boost freetype glew ];
 }
