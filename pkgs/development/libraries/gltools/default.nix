@@ -1,11 +1,11 @@
-{ stdenv, fetchgit, cmake, gcc, boost, freetype, glew}:
+{ stdenv, fetchgitPrivate, cmake, gcc, boost, freetype, glew}:
 
 stdenv.mkDerivation rec {
   name = "gltools";
   version = "0.1";
 
-  src = fetchgit {
-    url = "/var/tmp/gltools.git";
+  src = fetchgitPrivate {
+    url = "ssh://reinis@mazais:/home/reinis/projects/gltools.git";
     rev = "e91924a6a0fb7be0901104c629915bae2ed8a62e";
     sha256 = "0bh4q7326842qn2vcm2ifq0qk810rpnsfppblwjgz5ydvp3dsbjc";
   };
