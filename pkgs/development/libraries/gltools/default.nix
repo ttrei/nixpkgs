@@ -6,8 +6,8 @@ stdenv.mkDerivation rec {
 
   src = fetchgitPrivate {
     url = "ssh://mazais-fetchgit:/home/reinis/projects/gltools.git";
-    rev = "e91924a6a0fb7be0901104c629915bae2ed8a62e";
-    sha256 = "0bh4q7326842qn2vcm2ifq0qk810rpnsfppblwjgz5ydvp3dsbjc";
+    rev = "e7348a483697fd5935effebb7299021f3dea7b42";
+    sha256 = "0m80mqlrj5sgm12maj4srdsh319a477wmp4hisl2fyawwqm935fr";
   };
 
   nativeBuildInputs = [ gcc cmake ];
