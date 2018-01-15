@@ -1,17 +1,17 @@
 { stdenv
 , fetchurl
-, pythonPackages
+, python36Packages
 }:
 let
-  version = "2.3.2";
-in pythonPackages.buildPythonApplication rec {
+  version = "2.6";
+in python36Packages.buildPythonApplication rec {
   name = "mnemosyne-${version}";
   src = fetchurl {
     url    = "http://sourceforge.net/projects/mnemosyne-proj/files/mnemosyne/${name}/Mnemosyne-${version}.tar.gz";
-    sha256 = "0jkrw45i4v24p6xyq94z7rz5948h7f5dspgs5mcdaslnlp2accfp";
+    sha256 = "0b7b5sk5bfbsg5cyybkv5xw9zw257v3khsn0lwlbxnlhakd0rsg4";
   };
-  propagatedBuildInputs = with pythonPackages; [
-    pyqt4
+  propagatedBuildInputs = with python36Packages; [
+    pyqt5
     matplotlib
     cherrypy
     webob
@@ -22,8 +22,8 @@ in pythonPackages.buildPythonApplication rec {
   '';
   postInstall = ''
     mkdir -p $out/share
-    mv $out/lib/python2.7/site-packages/$out/share/locale $out/share
-    rm -r $out/lib/python2.7/site-packages/nix
+    mv $out/lib/python3.6/site-packages/$out/share/locale $out/share
+    rm -r $out/lib/python3.6/site-packages/nix
   '';
   meta = {
     homepage = http://mnemosyne-proj.org/;
