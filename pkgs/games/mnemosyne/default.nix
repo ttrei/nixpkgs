@@ -10,6 +10,7 @@ in python36Packages.buildPythonApplication rec {
     url    = "http://sourceforge.net/projects/mnemosyne-proj/files/mnemosyne/${name}/Mnemosyne-${version}.tar.gz";
     sha256 = "0b7b5sk5bfbsg5cyybkv5xw9zw257v3khsn0lwlbxnlhakd0rsg4";
   };
+  doCheck = false;
   propagatedBuildInputs = with python36Packages; [
     pyqt5
     matplotlib
