@@ -10,13 +10,13 @@
 }:
 
 let
-  version = "2024-10-18";
+  version = "2024-10-22";
 
   src = fetchFromGitHub {
     owner = "yetone";
     repo = "avante.nvim";
-    rev = "36b23cef16c2c624c34bea213f01c06782d2ca40";
-    hash = "sha256-QUFcJMbfr5BAS04ig1IHLCMLACeQhFVH9ZCH/VD8i8Y=";
+    rev = "a8e2b9a00c73b11d28857f0f5de79a9022281182";
+    hash = "sha256-72kNp+jH4fUevR1jb8gIOwaG6KvjmCx4B74TzitSSyY=";
   };
 
   meta = with lib; {
